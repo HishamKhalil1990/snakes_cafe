@@ -71,7 +71,8 @@ while quit != False:
     else:
         for food_dir in menu:
             for food in food_dir['foods']:
-                if order == food:
+                if order.upper() == food.upper():
+                    order = food
                     exists = True
                     break
             if exists == True:
